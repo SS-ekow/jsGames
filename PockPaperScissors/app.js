@@ -3,6 +3,8 @@ const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
 const computerScore = document.getElementById('computerScore')
 const userScore = document.getElementById('userScore')
+const audioElement1 = new Audio('win.mp3');
+const audioElement2 = new Audio('lost.mp3');
 
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
@@ -45,25 +47,32 @@ function getResult(){
     if (computerChoice === 'rock' && userChoice === 'paper'){
         result = "Paper beats rock. You win!"
         Uscore++
+        audioElement1.play();
     }
     if (computerChoice === 'rock' && userChoice === 'scissors'){
         result = "Rock beats scissors. You lost!"
         Cscore++
+        audioElement2.play();
     }
     if (computerChoice === 'paper' && userChoice === 'scissors'){
         result = "Scissors beats paper. You win!"
         Uscore++
+        audioElement1.play();
     }
     if (computerChoice === 'paper' && userChoice === 'rock'){
         result = "Paper beats rock. You lost!"
         Cscore++
+        audioElement2.play();
     }
     if (computerChoice === 'scissors' && userChoice === 'rock'){
         result = "Rock beats scissors. You win!"
         Uscore++
+        audioElement1.play();
     }
     if (computerChoice === 'scissors' && userChoice === 'paper'){
         result = "Scissors beats paper. You lost!"
+        Cscore++
+        audioElement2.play();
 
     }
 
