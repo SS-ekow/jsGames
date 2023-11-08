@@ -11,6 +11,9 @@ let result
 let Cscore = 0
 let Uscore = 0
 
+
+
+
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e)=>{
     userChoice = e.target.id
     userChoiceDisplay.innerHTML = userChoice
@@ -20,7 +23,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 }))
 
 function generateComputerChoice(){
-    const randomNumber = Math.floor(Math.random()*3)
+    const randomNumber = Math.floor(Math.random()*4)
 
     if (randomNumber === 1){
         computerChoice = 'rock'
