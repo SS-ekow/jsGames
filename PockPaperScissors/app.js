@@ -5,6 +5,7 @@ const computerScore = document.getElementById('computerScore')
 const userScore = document.getElementById('userScore')
 const audioElement1 = new Audio('win.mp3');
 const audioElement2 = new Audio('lost.mp3');
+const audioElement3 = new Audio('draw.mp3');
 
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
@@ -42,6 +43,7 @@ function generateComputerChoice(){
 function getResult(){
     if (computerChoice === userChoice){
         result = "it's a draw!"
+        audioElement3.play();
         
     }
     if (computerChoice === 'rock' && userChoice === 'paper'){
