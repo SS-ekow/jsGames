@@ -11,12 +11,35 @@
     <title>whack-a0mole game</title>
   </head>
   <body>
-   
+    <style>
+      .grid{
+        display: flex;
+        flex-wrap: wrap;
+        width: 606px;
+        height: 606px;
+      }
+
+      .square{
+        height: 200px;
+        width: 200px;
+        border-style: solid;
+        border-color: black;
+
+
+      }
+      .mole{
+        background-color: aqua;
+
+      }
+    </style>
+    <h2>Your score: </h2>
+   <h2 id="score"> 0</h2>
+   <h2>time left:</h2>
+   <h2 id="time-left"> 60</h2>
     <div class="row">
       <div class="col-4 offset-2">
         <div class="container scoreboard">
 
-          <h3>Score: <span id="result"></span></h3>
         </div>
 
       </div>
